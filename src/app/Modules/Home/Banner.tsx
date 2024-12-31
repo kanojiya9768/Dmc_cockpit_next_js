@@ -1,0 +1,80 @@
+import React from "react";
+import { IoIosRocket } from "react-icons/io";
+import ContactUsForm from "./ContactUsForm";
+import Image from "next/image";
+import { BsFillCheckCircleFill } from "react-icons/bs";
+
+const HomeBanner = () => {
+  return (
+    <div className="w-full h-max py-10 sm:py-20 lg:h-[100dvh] bg-primary-color bg-[-100px_50px] flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center px-10 sm:px-20 relative">
+      <div className="flex flex-col pt-20 gap-10">
+        <div className="flex flex-col gap-2 sm:gap-4 font-bold text-white">
+          <div className="flex gap-2 relative">
+            <Image
+              src={"/plans-section/stars-shine.svg"}
+              width={1000}
+              height={1000}
+              className="sm:w-10 sm:h-10 w-8 h-8 absolute -top-7 -left-8"
+              alt="stars-shine"
+            />
+            <p className="md:text-5xl text-3xl sm:text-4xl flex gap-2">
+              <span className="text-yellow-color">All-In-One</span>
+              <span>Digital</span>
+            </p>
+          </div>
+          <p className="md:text-5xl text-3xl sm:text-4xl">Marketing Platform.</p>
+          <p className="flex gap-2 md:text-3xl sm:text-2xl text-md">
+            <span className="text-green-color">Agencies</span>
+            <span>Save Up To</span>
+            <span className="relative text-green-color">
+              60%{" "}
+              <Image
+                src={"/single-star.svg"}
+                width={1000}
+                height={1000}
+                className="w-2 h-2 absolute -left-3 -bottom-1"
+                alt="single-star"
+              />{" "}
+              <Image
+                src={"/plans-section/stars-shine.svg"}
+                width={1000}
+                height={1000}
+                className="w-4 h-4 absolute -right-3 -bottom-1"
+                alt="stars-shine"
+              />
+            </span>
+            <span>On Sign Up!</span>
+          </p>
+        </div>
+        <div className="flex flex-nowrap sm:flex-row flex-col sm:flex-wrap gap-2">
+          <div className="flex items-center gap-2">
+            <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
+            <p className="text-md text-grey-color">Lead CRM</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
+            <p className="text-md text-grey-color">Whatsapp Ai Chatbot</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
+            <p className="text-md text-grey-color">Keywords Tracking & Analysis</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
+            <p className="text-md text-grey-color">Social Media Scheduling and Insight <span>& More</span></p>
+          </div>
+        </div>
+      {/* //Start Your FREE Trial Now */}
+      <div className="rounded-[90px] px-4 py-3 w-max bg-linear-gradient-yellow text-[white] flex gap-[4px] items-center">
+        <IoIosRocket className="text-[25px]" /> Start Your{" "}
+        <p style={{ fontWeight: "600" }}>FREE</p> Trial Now
+      </div>
+      </div>
+
+
+      <ContactUsForm />
+    </div>
+  );
+};
+
+export default HomeBanner;

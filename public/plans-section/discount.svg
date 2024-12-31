@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="339.602" height="46.854" viewBox="0 0 339.602 46.854">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffdd54"/>
+      <stop offset="1" stop-color="#ff9f25"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_17305" data-name="Rectangle 17305" width="158.5" height="16.093" fill="#2e023c"/>
+    </clipPath>
+  </defs>
+  <g id="Group_24106" data-name="Group 24106" transform="translate(-1500.66 -4292.889)">
+    <text id="Pay_Anually_and_save_upto_20_" data-name="Pay Anually and save upto 20%" transform="translate(1500.66 4313.889)" fill="#2e023c" font-size="20" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">Pay Anually and </tspan><tspan y="0" fill="#2ed789">save upto 20%</tspan></text>
+    <g id="shines_1_" data-name="shines (1)" transform="translate(1817.999 4296.889)">
+      <g id="Group_23884" data-name="Group 23884" transform="translate(5.679)">
+        <g id="Group_23883" data-name="Group 23883" transform="translate(0)">
+          <path id="Path_20677" data-name="Path 20677" d="M15.367,4.527A5.293,5.293,0,0,1,11.273.433a.545.545,0,0,0-1.067,0A5.293,5.293,0,0,1,6.112,4.527a.545.545,0,0,0,0,1.067,5.293,5.293,0,0,1,4.094,4.094.545.545,0,0,0,1.067,0,5.293,5.293,0,0,1,4.094-4.094.545.545,0,0,0,0-1.067Z" transform="translate(-5.679)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <g id="Group_23888" data-name="Group 23888" transform="translate(15.115 5.444)">
+        <g id="Group_23887" data-name="Group 23887">
+          <path id="Path_20679" data-name="Path 20679" d="M297.261,167.391a3.371,3.371,0,0,1-2.607-2.607.545.545,0,0,0-1.067,0,3.371,3.371,0,0,1-2.607,2.607.545.545,0,0,0,0,1.067,3.371,3.371,0,0,1,2.607,2.607.545.545,0,0,0,1.067,0,3.371,3.371,0,0,1,2.607-2.607.545.545,0,0,0,0-1.067Z" transform="translate(-290.547 -164.351)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_24088" data-name="Group 24088" transform="matrix(0.999, 0.035, -0.035, 0.999, 1670.757, 4318.128)">
+      <g id="Group_23994" data-name="Group 23994" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_78079" data-name="Path 78079" d="M142.369,7.009c-4.063-.019-7.073.033-7.785.054-11.483.345-38.064-1.7-67.716,1.4C54.581,9.744,42.886,11.794,39,12.481,32.126,13.7,26.3,14.9,21.856,15.869a.775.775,0,0,0,.367.224c7.784-.846,19.492-2.111,33.817-3.633,8.645-.919,17.063-1.805,18.949-2,12.33-1.276,33.82-2.827,71.844-3.315-1.487-.029-2.984-.129-4.464-.136" transform="translate(9.627 -2.877)" fill="#2ed789"/>
+        <path id="Path_78080" data-name="Path 78080" d="M89.482,3.46A668.489,668.489,0,0,1,158.5,3.415,494,494,0,0,0,84.65.265C65.984.89,53.081,2.43,47.827,3.106,21.321,6.514-.261,12.309,0,13.064c.229.656,16.782-2.791,46.569-6.045C68.788,4.591,85.6,3.666,89.482,3.46" transform="translate(0 0)" fill="#2e023c"/>
+      </g>
+    </g>
+  </g>
+</svg>
