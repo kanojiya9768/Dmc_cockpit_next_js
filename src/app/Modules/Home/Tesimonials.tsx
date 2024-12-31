@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import { motion } from "framer-motion";
-import { rightVarient } from "@/lib/framer_variants";
+import { bottomVarient } from "@/lib/framer_variants";
 
 const Testimonial = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -66,7 +66,7 @@ Design. This Will Just Slow Down The Design Process.
 
   return (
     <motion.div
-      variants={rightVarient}
+      variants={bottomVarient}
       initial="hidden"
       whileInView={"visible"}
       transition={{ duration: 0.7 }}

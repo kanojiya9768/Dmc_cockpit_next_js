@@ -104,7 +104,7 @@ export const FeaturesSection = () => {
           animate="visible"
           className="relative w-fullgrid place-items-center my-12"
         >
-          <div className="w-[90%]  bg-[#f7f7ff] rounded-[10px] flex md:flex-row flex-col md:gap-0 gap-[40px] justify-between items-center p-[20px]">
+          <div className="w-[90%] xl:w-[85%]  bg-[#f7f7ff] rounded-[10px] flex md:flex-row flex-col md:gap-0 gap-[40px] justify-between items-center p-[20px] xl:p-[50px]">
             <div className="w-full flex flex-col gap-[20px]">
               <div className="flex gap-[4px] text-[27px] font-extrabold">
                 <p className="text-green-color">

@@ -9,13 +9,13 @@ import { leftVarient, rightVarient } from "@/lib/framer_variants";
 
 const HomeBanner = () => {
   return (
-    <div className="w-full h-max py-10 sm:py-20 lg:h-[100dvh] bg-primary-color bg-[-100px_50px] flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center px-10 sm:px-20 relative">
+    <div className="w-full h-max py-14 bg-primary-color bg-[-100px_50px] flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center px-10 sm:px-20 relative">
       <motion.div
         variants={leftVarient}
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.7 }}
-        className="flex flex-col pt-20 gap-10"
+        className="flex flex-col gap-10"
       >
         <div className="flex flex-col gap-2 sm:gap-4 font-bold text-white">
           <div className="flex gap-2 relative">
@@ -91,7 +91,7 @@ const HomeBanner = () => {
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.7 }}
-        className="lg:w-[550px] w-full md:w-[85%]"
+        className="lg:w-[550px] h-[90%] my-auto w-full md:w-[85%]"
       >
         <ContactUsForm />
       </motion.div>

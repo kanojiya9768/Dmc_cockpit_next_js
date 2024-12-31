@@ -19,7 +19,7 @@ const SupportData = [
 
 export const Support = () => {
   return (
-    <div className="support_Conatiner w-full h-[600px] bg-[url('/gradient_bg_banner.png')] [background-size:100%] bg-center bg-no-repeat relative flex flex-col gap-[120px]">
+    <div className="support_Conatiner w-full h-[750px] bg-[url('/gradient_bg_banner.png')] bg-cover bg-center bg-repeat relative flex flex-col gap-[120px]">
       <div className="supportlisting w-full h-max flex xl:flex-nowrap flex-wrap justify-center items-center xl:justify-between mt-[50px] px-[60px] gap-[20px] ">
         {SupportData?.map((suport, index) => {
           return (
