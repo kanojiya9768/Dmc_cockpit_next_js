@@ -1,3 +1,6 @@
+"use client";
+import { leftVarient } from "@/lib/framer_variants";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
@@ -39,10 +42,20 @@ export const StraightForward = () => {
       </p>
 
       {/* //points  */}
-      <div className="w-full px-10 sm:px-20 my-8 grid md:grid-cols-2 gap-6">
+      <motion.div
+        variants={leftVarient}
+        initial="hidden"
+        whileInView={"visible"}
+        transition={{ duration: 0.7 }}
+        viewport={{ margin: "0px 0px -100px 0px" }}
+        className="w-full px-10 sm:px-20 my-8 grid md:grid-cols-2 gap-6"
+      >
         {StraightForwardData?.map((data, index) => {
           return (
-            <div key={index} className="bg-white  flex flex-col gap-4 [box-shadow:rgba(0,_0,_0,_0.35)_0px_5px_15px] rounded-md px-8 py-8">
+            <div
+              key={index}
+              className="bg-white  flex flex-col gap-4 [box-shadow:rgba(0,_0,_0,_0.35)_0px_5px_15px] rounded-md px-8 py-8"
+            >
               <div className="flex items-center gap-4">
                 <Image
                   src={data?.icon}
@@ -51,13 +64,17 @@ export const StraightForward = () => {
                   className="w-10 h-10"
                   alt="image-logo"
                 />
-                <p className="text-lg font-bold text-violet-light-color">{data?.title}</p>
+                <p className="text-lg font-bold text-violet-light-color">
+                  {data?.title}
+                </p>
               </div>
-              <p className="text-[15px] text-light-primary-color font-medium">{data?.description}</p>
+              <p className="text-[15px] text-light-primary-color font-medium">
+                {data?.description}
+              </p>
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };

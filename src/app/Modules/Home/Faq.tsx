@@ -1,7 +1,14 @@
 "use client";
 import React from "react";
 import { AllFaq } from "@/json/faq";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { motion } from "framer-motion";
+import { bottomVarient } from "@/lib/framer_variants";
 
 export const Faq = () => {
   return (
@@ -12,7 +19,14 @@ export const Faq = () => {
       </p>
 
       {/* //all faq  */}
-      <div className="faq_parent_div w-full grid grid-cols-1 md:grid-cols-2 md:gap-[50px] mt-[40px] px-[20px] sm:px-[50px] lg:px-[100px]">
+      <motion.div
+        variants={bottomVarient}
+        initial="hidden"
+        whileInView={"visible"}
+        transition={{ duration: 0.7 }}
+        viewport={{ margin: "0px 0px -100px 0px" }}
+        className="faq_parent_div w-full grid grid-cols-1 md:grid-cols-2 md:gap-[50px] mt-[40px] px-[20px] sm:px-[50px] lg:px-[100px]"
+      >
         <Accordion
           className="faqs_listing_div w-full flex flex-col"
           type="single"
@@ -28,9 +42,9 @@ export const Faq = () => {
                 <AccordionTrigger className="w-full flex items-center justify-between cursor-pointer">
                   <p className="font-semibold text-base">{faq?.title}</p>
                 </AccordionTrigger>
-                  <AccordionContent className="faq_desc w-[90%] text-[14px] font-normal font-[sans-serif] leading-[21px] text-light-primary-color">
-                    {faq?.desc}
-                  </AccordionContent>
+                <AccordionContent className="faq_desc w-[90%] text-[14px] font-normal font-[sans-serif] leading-[21px] text-light-primary-color">
+                  {faq?.desc}
+                </AccordionContent>
               </AccordionItem>
             );
           })}
@@ -50,14 +64,14 @@ export const Faq = () => {
                 <AccordionTrigger className="w-full flex items-center justify-between cursor-pointer">
                   <p className="font-semibold text-base">{faq?.title}</p>
                 </AccordionTrigger>
-                  <AccordionContent className="faq_desc w-[90%] text-[14px] font-normal font-[sans-serif] leading-[21px] text-light-primary-color">
-                    {faq?.desc}
-                  </AccordionContent>
+                <AccordionContent className="faq_desc w-[90%] text-[14px] font-normal font-[sans-serif] leading-[21px] text-light-primary-color">
+                  {faq?.desc}
+                </AccordionContent>
               </AccordionItem>
             );
           })}
         </Accordion>{" "}
-      </div>
+      </motion.div>
     </div>
   );
 };

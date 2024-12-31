@@ -1,3 +1,6 @@
+"use client";
+import { bottomVarient } from "@/lib/framer_variants";
+import { motion } from "framer-motion";
 import React from "react";
 
 const FirstDMCaptain = [
@@ -31,7 +34,14 @@ const SecondDMCaptain = [
 ];
 export const DMCaptain = () => {
   return (
-    <div className="DMCaptainContainer w-full flex flex-col justify-center items-center gap-[20px] bg-very-light-violet-color drop-shadow-sm">
+    <motion.div
+      variants={bottomVarient}
+      initial="hidden"
+      whileInView={"visible"}
+      transition={{ duration: 0.7 }}
+      viewport={{ margin: "0px 0px -100px 0px" }}
+      className="DMCaptainContainer w-full py-10 flex flex-col justify-center items-center gap-[20px] bg-very-light-violet-color drop-shadow-sm"
+    >
       <p className="heading">DM Captain! </p>
 
       {/* DNCaptain Main div is here   */}
@@ -40,7 +50,10 @@ export const DMCaptain = () => {
         <div className="firstDiv flex md:flex-col flex-row md:flex-nowrap flex-wrap md:justify-normal md:items-start justify-center items-center gap-[50px]">
           {FirstDMCaptain?.map((data, index) => {
             return (
-              <div key={index} className="DmCaptainOptionsDiv flex lg:flex-row flex-col items-center gap-[14px] text-[rgb(52,_51,_51)]">
+              <div
+                key={index}
+                className="DmCaptainOptionsDiv flex lg:flex-row flex-col items-center gap-[14px] text-[rgb(52,_51,_51)]"
+              >
                 <p>{data?.title}</p>
                 <img src={data?.logo} alt="DmCaptainLogos" />
               </div>
@@ -61,7 +74,10 @@ export const DMCaptain = () => {
         <div className="ThirdDiv flex md:flex-col flex-row md:flex-nowrap flex-wrap md:justify-normal md:items-start justify-center items-center gap-[50px]">
           {SecondDMCaptain?.map((data, index) => {
             return (
-              <div key={index} className="DmCaptainOptionsDiv flex lg:flex-row flex-col items-center gap-[14px] text-[rgb(52,_51,_51)]">
+              <div
+                key={index}
+                className="DmCaptainOptionsDiv flex lg:flex-row flex-col items-center gap-[14px] text-[rgb(52,_51,_51)]"
+              >
                 <img src={data?.logo} alt="DmCaptainLogos" />
                 <p>{data?.title}</p>
               </div>
@@ -69,6 +85,6 @@ export const DMCaptain = () => {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

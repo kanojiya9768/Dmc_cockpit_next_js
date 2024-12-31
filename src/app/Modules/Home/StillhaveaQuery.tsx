@@ -1,15 +1,31 @@
+"use client";
 import { Input } from "@/components/ui/input";
+import { bottomVarient } from "@/lib/framer_variants";
+import { motion } from "framer-motion";
 import React from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 export const StillhaveaQuery = () => {
   return (
-    <div className="StillhaveaQuery_Container w-full flex lg:flex-row flex-col justify-around items-center bg-[#f7f7ff] py-[50px] my-[100px] xl:mt-[70px]">
+    <motion.div
+      variants={bottomVarient}
+      initial="hidden"
+      whileInView={"visible"}
+      transition={{ duration: 0.7 }}
+      viewport={{ margin: "0px 0px -100px 0px" }}
+      className="StillhaveaQuery_Container w-full flex lg:flex-row flex-col justify-around items-center bg-[#f7f7ff] py-[50px] my-[100px] xl:mt-[70px]"
+    >
       <form className="StillHaveaQueryForm sm:w-[70%] w-[90%] md:w-[80%] flex flex-col px-[20px] sm:px-[80px] py-[50px] gap-[30px] lg:w-2/5 h-auto rounded-[20px] lg:ml-[50px] bg-[url('/querysection/rocket.png')] [background-size:100%_100%] bg-no-repeat">
         <div>
           <p
             className="heading"
-            style={{ color: "white", fontSize: "45px",lineHeight : "45px",marginBottom : "10px", fontWeight: "800" }}
+            style={{
+              color: "white",
+              fontSize: "45px",
+              lineHeight: "45px",
+              marginBottom: "10px",
+              fontWeight: "800",
+            }}
           >
             Still Have A Query?{" "}
           </p>
@@ -47,6 +63,6 @@ export const StillhaveaQuery = () => {
         alt="StillhaveaQueryIMage"
         className="lg:w-[45%] w-[90%]"
       />
-    </div>
+    </motion.div>
   );
 };

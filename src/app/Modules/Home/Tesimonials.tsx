@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 import { motion } from "framer-motion";
+import { rightVarient } from "@/lib/framer_variants";
 
 const Testimonial = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-  const sliderData  = [
+  const sliderData = [
     {
       id: 1,
       name: "Aleesha Brown",
@@ -62,10 +63,16 @@ Design. This Will Just Slow Down The Design Process.
       sliderData[nextIndex],
     ];
   };
-  
 
   return (
-    <div className="w-[75%] mx-auto flex flex-col mt-32 justify-center items-center relative">
+    <motion.div
+      variants={rightVarient}
+      initial="hidden"
+      whileInView={"visible"}
+      transition={{ duration: 0.7 }}
+      viewport={{ margin: "0px 0px -100px 0px" }}
+      className="w-[75%] mx-auto flex flex-col mt-32 justify-center items-center relative"
+    >
       <p className="heading">Testimonials</p>
       <p className="description !mt-0" style={{ fontSize: "18px" }}>
         Lorem Ipsum Dolor Sit Amet, Consectetur
@@ -96,11 +103,15 @@ Design. This Will Just Slow Down The Design Process.
                   index === 1 ? "scale-125" : "scale-100 grayscale"
                 }`}
               />
-                {
-                    index===1
-                    &&
-                    <Image src={'/testimonial/comment.svg'} width={1000} height={1000} className="absolute w-8 -right-6 top-[35%]" alt="comment" />
-                }
+              {index === 1 && (
+                <Image
+                  src={"/testimonial/comment.svg"}
+                  width={1000}
+                  height={1000}
+                  className="absolute w-8 -right-6 top-[35%]"
+                  alt="comment"
+                />
+              )}
             </motion.div>
           );
         })}
@@ -160,7 +171,7 @@ Design. This Will Just Slow Down The Design Process.
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

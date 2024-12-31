@@ -7,7 +7,7 @@ const ContactUsForm = () => {
   return (
     <form
       action=""
-      className="lg:w-[550px] w-full md:w-[85%] p-6 h-auto bg-[#fff] self-center rounded-[10px] flex flex-col items-center gap-[25px] [box-shadow:rgba(0,_0,_0,_0.1)_0px_4px_12px]"
+      className="p-6 h-auto bg-[#fff] self-center rounded-[10px] flex flex-col items-center gap-[25px] [box-shadow:rgba(0,_0,_0,_0.1)_0px_4px_12px]"
     >
       <div className="flex items-center justify-center text-[18px] gap-[3px]">
         {" "}

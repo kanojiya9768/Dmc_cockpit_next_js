@@ -1,13 +1,22 @@
+"use client";
 import React from "react";
 import { IoIosRocket } from "react-icons/io";
 import ContactUsForm from "./ContactUsForm";
 import Image from "next/image";
 import { BsFillCheckCircleFill } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { leftVarient, rightVarient } from "@/lib/framer_variants";
 
 const HomeBanner = () => {
   return (
     <div className="w-full h-max py-10 sm:py-20 lg:h-[100dvh] bg-primary-color bg-[-100px_50px] flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center px-10 sm:px-20 relative">
-      <div className="flex flex-col pt-20 gap-10">
+      <motion.div
+        variants={leftVarient}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.7 }}
+        className="flex flex-col pt-20 gap-10"
+      >
         <div className="flex flex-col gap-2 sm:gap-4 font-bold text-white">
           <div className="flex gap-2 relative">
             <Image
@@ -22,7 +31,9 @@ const HomeBanner = () => {
               <span>Digital</span>
             </p>
           </div>
-          <p className="md:text-5xl text-3xl sm:text-4xl">Marketing Platform.</p>
+          <p className="md:text-5xl text-3xl sm:text-4xl">
+            Marketing Platform.
+          </p>
           <p className="flex gap-2 md:text-3xl sm:text-2xl text-md">
             <span className="text-green-color">Agencies</span>
             <span>Save Up To</span>
@@ -57,22 +68,33 @@ const HomeBanner = () => {
           </div>
           <div className="flex items-center gap-2">
             <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
-            <p className="text-md text-grey-color">Keywords Tracking & Analysis</p>
+            <p className="text-md text-grey-color">
+              Keywords Tracking & Analysis
+            </p>
           </div>
           <div className="flex items-center gap-2">
             <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
-            <p className="text-md text-grey-color">Social Media Scheduling and Insight <span>& More</span></p>
+            <p className="text-md text-grey-color">
+              Social Media Scheduling and Insight <span>& More</span>
+            </p>
           </div>
         </div>
-      {/* //Start Your FREE Trial Now */}
-      <div className="rounded-[90px] px-4 py-3 w-max bg-linear-gradient-yellow text-[white] flex gap-[4px] items-center">
-        <IoIosRocket className="text-[25px]" /> Start Your{" "}
-        <p style={{ fontWeight: "600" }}>FREE</p> Trial Now
-      </div>
-      </div>
+        {/* //Start Your FREE Trial Now */}
+        <div className="rounded-[90px] px-4 py-3 w-max bg-linear-gradient-yellow text-[white] flex gap-[4px] items-center">
+          <IoIosRocket className="text-[25px]" /> Start Your{" "}
+          <p style={{ fontWeight: "600" }}>FREE</p> Trial Now
+        </div>
+      </motion.div>
 
-
-      <ContactUsForm />
+      <motion.div
+        variants={rightVarient}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.7 }}
+        className="lg:w-[550px] w-full md:w-[85%]"
+      >
+        <ContactUsForm />
+      </motion.div>
     </div>
   );
 };
