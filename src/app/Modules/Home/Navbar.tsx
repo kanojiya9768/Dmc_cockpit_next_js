@@ -21,11 +21,11 @@ const Navbar = () => {
 
       {/* //navbar_container */}
       {/* //desktop navbar  */}
-      <nav className="w-full h-[100px] bg-[white] flex justify-between items-center px-10">
+      <nav className="w-full sm:h-[100px] bg-[white] flex justify-between items-center px-8 sm:px-10">
         <img
           src={"/logo.svg"}
           alt="logo"
-          className="logo mt-4 sm:w-[220px] w-[180px]"
+          className="logo mt-4 sm:w-[220px] w-[160px]"
         />
         <div className="xl:flex hidden gap-[50px]">
           {Routes?.map((route, index) => {
@@ -60,7 +60,7 @@ const Navbar = () => {
 
         {/* //humburger  */}
         <GiHamburgerMenu
-          className="xl:hidden block text-[40px] sm:text-5xl border-2 border-primary-color p-2 rounded-full"
+          className="xl:hidden block text-[35px] sm:text-5xl border-2 border-primary-color p-2 rounded-full"
           onClick={() => setShowNavbar(!showNavbar)}
         />
       </nav>

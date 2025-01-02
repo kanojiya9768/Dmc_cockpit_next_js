@@ -13,14 +13,14 @@ export const BannerSection24_7 = () => {
           height={5000}
           className="Laptop_banner_24_7 absolute md:-left-[100px] -top-[60px] w-[700px] md:block hidden"
         />
-        <div className="right24_7_Section px-10 md:ml-[62%] lg:ml-[55%] xl:ml-[46%] flex flex-col justify-center gap-[20px] leading-[30px]">
-          <p className="singUpText text-[19px] text-[whitesmoke] font-normal">
+        <div className="right24_7_Section px-10 md:ml-[62%] lg:ml-[55%] xl:ml-[46%] flex flex-col justify-center gap-4 sm:gap-[20px] leading-[30px]">
+          <p className="singUpText text-base sm:text-[19px] text-[whitesmoke] font-normal">
             SIGN UP NOW
           </p>
-          <p className="Triel_Text text-[40px] font-extrabold text-[white] leading-[40px]">
+          <p className="Triel_Text text-3xl sm:text-[40px] font-extrabold text-[white] leading-[40px]">
             GET <span className="text-green-color">30 DAYS</span> FREE TRIAL{" "}
           </p>
-          <p className="For_Which_user_text text-[28px] text-white">
+          <p className="For_Which_user_text text-2xl sm:text-[28px] text-white">
             For Agencies
           </p>
           <button className="flex items-center gap-[4px] w-max px-[20px] py-[4px] bg-transparent border-[1px] border-solid font-medium border-light-dark-grey-color text-[white] text-[13px] rounded-[99px] outline-[none]">

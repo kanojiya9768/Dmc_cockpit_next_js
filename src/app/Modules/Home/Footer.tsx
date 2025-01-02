@@ -75,7 +75,7 @@ const FooterData = [
 
 export const Footer = () => {
   return (
-    <div className="Footer_Container">
+    <div className="Footer_Container ">
       <div className="Company_details_Conatiner">
         <img src={"/logo2.png"} alt="logo" className="footer_logo" />
         <p className="footer_desc">
@@ -122,7 +122,10 @@ export const Footer = () => {
           <img src={"/footer/indeed.png"} alt="facebookImage" />
           <img src={"/footer/indeed.png"} alt="indeedImage" />
         </div>
-        <img src={"/footer/dmca_protected_sml_120aa.png"} alt="DMCALockedImage" />
+        <img
+          src={"/footer/dmca_protected_sml_120aa.png"}
+          alt="DMCALockedImage"
+        />
       </div>
     </div>
   );

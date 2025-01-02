@@ -9,7 +9,7 @@ import { leftVarient, rightVarient } from "@/lib/framer_variants";
 
 const HomeBanner = () => {
   return (
-    <div className="w-full h-max py-14 bg-primary-color bg-[-100px_50px] flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center px-10 sm:px-20 relative">
+    <div className="w-full h-max py-14 bg-primary-color bg-[-100px_50px] flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center px-8 sm:px-20 relative">
       <motion.div
         variants={leftVarient}
         initial="hidden"
@@ -23,18 +23,18 @@ const HomeBanner = () => {
               src={"/plans-section/stars-shine.svg"}
               width={1000}
               height={1000}
-              className="sm:w-10 sm:h-10 w-8 h-8 absolute -top-7 -left-8"
+              className="sm:w-10 sm:h-10 w-6 h-6 absolute  -top-5 -left-5 sm:-top-7 sm:-left-8"
               alt="stars-shine"
             />
-            <p className="md:text-5xl text-3xl sm:text-4xl flex gap-2">
+            <p className="md:text-5xl text-2xl sm:text-4xl flex gap-2">
               <span className="text-yellow-color">All-In-One</span>
               <span>Digital</span>
             </p>
           </div>
-          <p className="md:text-5xl text-3xl sm:text-4xl">
+          <p className="md:text-5xl text-2xl sm:text-4xl">
             Marketing Platform.
           </p>
-          <p className="flex gap-2 md:text-3xl sm:text-2xl text-md">
+          <p className="flex gap-2 md:text-3xl sm:text-2xl !text-xs">
             <span className="text-green-color">Agencies</span>
             <span>Save Up To</span>
             <span className="relative text-green-color">
@@ -57,24 +57,24 @@ const HomeBanner = () => {
             <span>On Sign Up!</span>
           </p>
         </div>
-        <div className="flex flex-nowrap sm:flex-row flex-col sm:flex-wrap gap-2">
+        <div className="flex flex-nowrap sm:flex-row flex-col sm:flex-wrap gap-2 w-full">
           <div className="flex items-center gap-2">
-            <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
+            <BsFillCheckCircleFill className="text-green-color w-max h-max bg-white rounded-full text-xl" />
             <p className="text-md text-grey-color">Lead CRM</p>
           </div>
           <div className="flex items-center gap-2">
-            <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
+            <BsFillCheckCircleFill className="text-green-color w-max h-max bg-white rounded-full text-xl" />
             <p className="text-md text-grey-color">Whatsapp Ai Chatbot</p>
           </div>
           <div className="flex items-center gap-2">
-            <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
+            <BsFillCheckCircleFill className="text-green-color w-max h-max bg-white rounded-full text-xl" />
             <p className="text-md text-grey-color">
               Keywords Tracking & Analysis
             </p>
           </div>
-          <div className="flex items-center gap-2">
-            <BsFillCheckCircleFill className="text-green-color bg-white rounded-full text-xl" />
-            <p className="text-md text-grey-color">
+          <div className="flex  items-center gap-2 w-full">
+            <BsFillCheckCircleFill className="text-green-color w-max h-max bg-white rounded-full text-xl" />
+            <p className="w-full text-md text-grey-color">
               Social Media Scheduling and Insight <span>& More</span>
             </p>
           </div>

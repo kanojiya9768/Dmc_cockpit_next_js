@@ -15,22 +15,12 @@ export const StillhaveaQuery = () => {
       viewport={{ margin: "0px 0px -100px 0px" }}
       className="StillhaveaQuery_Container w-full flex lg:flex-row flex-col justify-around items-center bg-[#f7f7ff] py-[50px] my-[100px] xl:mt-[70px]"
     >
-      <form className="StillHaveaQueryForm sm:w-[70%] w-[90%] md:w-[80%] flex flex-col px-[20px] sm:px-[80px] py-[50px] gap-[30px] lg:w-2/5 h-auto rounded-[20px] lg:ml-[50px] bg-[url('/querysection/rocket.png')] [background-size:100%_100%] bg-no-repeat">
-        <div>
-          <p
-            className="heading"
-            style={{
-              color: "white",
-              fontSize: "45px",
-              lineHeight: "45px",
-              marginBottom: "10px",
-              fontWeight: "800",
-            }}
-          >
+      <form className="StillHaveaQueryForm sm:w-[70%] w-[90%] md:w-[80%] flex flex-col px-[20px] sm:px-[60px] py-[50px] gap-[30px] lg:w-2/5 h-auto rounded-[20px] lg:ml-[50px] bg-[url('/querysection/rocket.png')] [background-size:100%_100%] bg-no-repeat">
+        <div className="flex flex-col items-start gap-2">
+          <p className="text-3xl sm:text-5xl text-white font-bold">
             Still Have A Query?{" "}
           </p>
           <p
-            className="heading"
             style={{
               color: "var(--green-color)",
               fontSize: "26px",

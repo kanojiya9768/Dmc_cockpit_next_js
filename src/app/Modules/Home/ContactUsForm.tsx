@@ -14,7 +14,13 @@ const ContactUsForm = () => {
         <div className="flex gap-[6px]">
           <p>Contact Us To</p> <p style={{ fontWeight: "600" }}>Grow</p>
         </div>{" "}
-        <Image width={1000} height={1000} src={"/growth-chart.png"} alt="growthChart" className="w-[33px]" />
+        <Image
+          width={1000}
+          height={1000}
+          src={"/growth-chart.png"}
+          alt="growthChart"
+          className="w-[33px]"
+        />
       </div>
 
       {/* //main form inputs  */}
@@ -22,7 +28,7 @@ const ContactUsForm = () => {
         <Input
           type="text"
           placeholder="Full Name"
-          className="bg-light-input-color outline-none border-none p-[24px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
+          className="bg-light-input-color outline-none border-none py-[20px] sm:p-[24px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
         />
         <div
           style={{ width: "100%", position: "relative" }}
@@ -35,12 +41,12 @@ const ContactUsForm = () => {
           <Input
             type="number"
             style={{ width: "100%", paddingLeft: "54px" }}
-            className="bg-light-input-color outline-none border-none p-[24px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
+            className="bg-light-input-color outline-none border-none  py-[20px] sm:p-[24px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
             placeholder="Phone Number"
           />
         </div>
         <Input
-          className="bg-light-input-color outline-none border-none p-[24px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
+          className="bg-light-input-color outline-none border-none  py-[20px] sm:p-[24px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
           type="email"
           placeholder="Email Address"
         />
@@ -48,7 +54,7 @@ const ContactUsForm = () => {
           name="message"
           placeholder="Message"
           id="Message"
-          className="bg-light-input-color outline-none border-none p-[24px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
+          className="bg-light-input-color outline-none border-none px-4  py-[20px] sm:p-[24px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
           rows={3}
         ></textarea>
         <div className="w-full flex items-center gap-[6px]">
@@ -67,10 +73,10 @@ const ContactUsForm = () => {
 
       {/* //submit button is here  */}
       <div className="w-full flex items-center justify-between cursor-pointer">
-        <div className="bg-primary-color w-[87%] p-[14px] text-[white] font-semibold uppercase text-[13px]">
+        <div className="bg-primary-color w-[80%] sm:w-[87%] p-[14px] text-[white] font-semibold uppercase text-[13px]">
           Send
         </div>
-        <IoIosArrowForward className="w-[13%] h-[47px] p-[12px] text-[white] bg-green-color" />
+        <IoIosArrowForward className="w-[20%] sm:w-[13%] h-[47px] p-[12px] text-[white] bg-green-color" />
       </div>
     </form>
   );
