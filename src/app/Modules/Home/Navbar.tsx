@@ -1,7 +1,7 @@
 "use client";
 import { Routes } from "@/json/navbar";
 import { usePathname } from "next/navigation";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
@@ -12,11 +12,11 @@ const Navbar = () => {
   return (
     <div className="navbar_parent_div" style={{ position: "relative" }}>
       {/* //offer message */}
-      <div className="w-full h-[40px] bg-white bg-linear-gradient-green-to-blue flex justify-center items-center gap-[5px] font-[sans-serif] font-semibold text-[#fff] text-[14px]">
-        <img src={"/rocket.svg"} alt="rocket-img" />
+      <div className="w-full h-[40px] bg-white bg-linear-gradient-green-to-blue flex justify-center items-center gap-[5px] font-[sans-serif] font-semibold text-[#fff] text-[11px] sm:text-[14px]">
+        <img src={"/rocket.svg"} alt="rocket-img" className="sm:w-max w-6" />
         <p>Sign up today to accelerate your business! </p>
         <button>Join us</button>
-        <img src={"/rocket.svg"} alt="rocket-img" />
+        <img src={"/rocket.svg"} alt="rocket-img" className="sm:w-max w-6" />
       </div>
 
       {/* //navbar_container */}
@@ -25,8 +25,7 @@ const Navbar = () => {
         <img
           src={"/logo.svg"}
           alt="logo"
-          className="logo mt-4"
-          style={{ width: "220px" }}
+          className="logo mt-4 sm:w-[220px] w-[180px]"
         />
         <div className="xl:flex hidden gap-[50px]">
           {Routes?.map((route, index) => {
@@ -61,7 +60,7 @@ const Navbar = () => {
 
         {/* //humburger  */}
         <GiHamburgerMenu
-          className="xl:hidden block text-5xl border-2 border-primary-color p-2 rounded-full"
+          className="xl:hidden block text-[40px] sm:text-5xl border-2 border-primary-color p-2 rounded-full"
           onClick={() => setShowNavbar(!showNavbar)}
         />
       </nav>

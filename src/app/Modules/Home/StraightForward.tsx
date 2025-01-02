@@ -48,7 +48,7 @@ export const StraightForward = () => {
         whileInView={"visible"}
         transition={{ duration: 0.7 }}
         viewport={{ margin: "0px 0px -100px 0px" }}
-        className="w-full px-10 sm:px-20 my-8 grid md:grid-cols-2 gap-6"
+        className="w-full px-6 sm:px-20 my-8 grid md:grid-cols-2 gap-6"
       >
         {StraightForwardData?.map((data, index) => {
           return (

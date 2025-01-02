@@ -71,19 +71,22 @@ Design. This Will Just Slow Down The Design Process.
       whileInView={"visible"}
       transition={{ duration: 0.7 }}
       viewport={{ margin: "0px 0px -100px 0px" }}
-      className="w-[75%] mx-auto flex flex-col mt-32 justify-center items-center relative"
+      className="w-full h-[500px] mx-auto flex flex-col mt-32 justify-center items-center relative"
     >
       <p className="heading">Testimonials</p>
       <p className="description !mt-0" style={{ fontSize: "18px" }}>
         Lorem Ipsum Dolor Sit Amet, Consectetur
       </p>
 
+      {/* //prev button  */}
       <button
-        className="absolute left-0 text-3xl text-gray-500 hover:text-gray-900 transition duration-300 "
+        className="absolute left-[5%] xl:left-[15%] top-[55%] sm:top-[60%] text-3xl text-gray-500 hover:text-gray-900 transition duration-300 "
         onClick={handlePrev}
       >
         <GrLinkPrevious />
       </button>
+
+      {/* //profile photos */}
       <div className="flex items-center gap-6 mt-10">
         {getVisibleSlides().map((item, index) => {
           return (
@@ -116,7 +119,9 @@ Design. This Will Just Slow Down The Design Process.
           );
         })}
       </div>
-      <div className="flex items-center justify-evenly w-1/2 mt-6">
+
+      {/* //review and ratings  */}
+      <div className="flex items-center justify-evenly sm:w-1/2 mt-6">
         {getVisibleSlides().map((item, index) => {
           return (
             index === 1 && (
@@ -125,7 +130,7 @@ Design. This Will Just Slow Down The Design Process.
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
                 key={activeIndex}
-                className="text-center flex flex-col gap-4 mt-4 w-full"
+                className="text-center flex flex-col gap-4 mt-4 w-full px-10"
               >
                 <div className="flex justify-center items-center gap-1">
                   {[1, 2, 3, 4, 5].map((rating, index) => (
@@ -139,7 +144,7 @@ Design. This Will Just Slow Down The Design Process.
                     />
                   ))}
                 </div>
-                <p className="text-sm text-light-primary-color">
+                <p className="text-sm text-light-primary-color line-clamp-4">
                   {item.review}
                 </p>
                 <div>
@@ -155,12 +160,16 @@ Design. This Will Just Slow Down The Design Process.
           );
         })}
       </div>
+
+      {/* //next button  */}
       <button
-        className="absolute right-0 text-gray-500 text-3xl hover:text-gray-900 transition duration-300"
+        className="absolute right-[5%] xl:right-[15%] top-[55%] sm:top-[60%] text-gray-500 text-3xl hover:text-gray-900 transition duration-300"
         onClick={handleNext}
       >
         <GrLinkNext />
       </button>
+
+      {/* //dotted circle  */}
       <div className="flex justify-center items-center absolute w-full -bottom-10">
         {sliderData.map((item, index) => (
           <div

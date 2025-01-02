@@ -160,6 +160,17 @@ body {
   font-weight: 600;
   font-weight: 800;
   color: var(--primary-color);
+  padding-inline: 10px;
+  text-align: center;
+}
+
+.description {
+  font-size: 15px;
+  color: var(--primary-color);
+  margin-block: 10px;
+  text-align: center;
+  color: var(--violet-light-color);
+  padding-inline: 10px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -174,14 +185,10 @@ body {
   .heading {
     font-size: 25px;
   }
-}
 
-.description {
-  font-size: 15px;
-  color: var(--primary-color);
-  margin-block: 10px;
-  text-align: center;
-  color: var(--violet-light-color);
+  .description {
+    font-size: 15px !important;
+  }
 }
 
 /* From Uiverse.io by TCdesign-dev */
@@ -419,8 +426,6 @@ body {
   width: 100px;
 }
 
-
-
 /* //link animation */
 .hover-underline-animation {
   display: inline-block;
@@ -428,7 +433,7 @@ body {
 }
 
 .hover-underline-animation::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
