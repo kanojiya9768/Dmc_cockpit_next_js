@@ -34,7 +34,7 @@ const HomeBanner = () => {
           <p className="md:text-5xl text-2xl sm:text-4xl">
             Marketing Platform.
           </p>
-          <p className="flex gap-2 md:text-3xl sm:text-2xl !text-xs">
+          <p className="flex gap-2 md:text-3xl sm:text-2xl text-xs">
             <span className="text-green-color">Agencies</span>
             <span>Save Up To</span>
             <span className="relative text-green-color">
