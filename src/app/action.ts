@@ -37,10 +37,10 @@ const sendMailPromise = (enquiryData: ContactUsFormInterface) =>
   });
 
 export async function SendMail(
-  prev: any,
+  prev: SendMailAPIResponse,
   ContactUsData: ContactUsFormInterface
 ): Promise<SendMailAPIResponse> {
-  let validateFields = ContactUsSchema.safeParse({
+  const validateFields = ContactUsSchema.safeParse({
     FullName: ContactUsData.FullName as string,
     CountryCode: ContactUsData?.CountryCode,
     PhoneNumber: ContactUsData.PhoneNumber as string,

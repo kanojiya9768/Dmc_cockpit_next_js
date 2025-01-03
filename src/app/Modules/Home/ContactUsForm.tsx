@@ -7,7 +7,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { IoIosArrowForward, IoMdArrowDropdown } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ContactUsSchema } from "@/lib/zod-schemas";
@@ -18,7 +18,7 @@ import {
 import toast from "react-hot-toast";
 import { SendMail } from "@/app/action";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import {
   Select,
   SelectContent,
@@ -27,18 +27,18 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const initialState: SendMailAPIResponse = {
+export const initialState: SendMailAPIResponse = {
   message: "",
   status: undefined,
 };
+
+type CountryCodeInterface = { name: string; dial_code: string; code: string };
 
 const ContactUsForm = () => {
   const [state, formAction, isPending] = useActionState(SendMail, initialState);
 
   const [agree, setAgree] = useState(false);
-  const [CountryCode, setCountryCode] = useState<
-    { name: string; dial_code: string; code: string }[]
-  >([]);
+  const [CountryCode, setCountryCode] = useState<CountryCodeInterface[]>([]);
 
   //handle form data and error and zod validation usinf resolver
   const {
@@ -79,20 +79,33 @@ const ContactUsForm = () => {
     try {
       const response = await axios.get("/api/country-codes");
       if (response?.status === 200) {
-        let UniqCodes: any = [];
-        response?.data?.map((responseData: any) => {
-          if (
-            !UniqCodes?.some(
-              (data: any) => data?.dial_code === responseData?.dial_code
-            )
-          ) {
-            UniqCodes.push(responseData);
-          }
-        });
+        const UniqCodes: CountryCodeInterface[] = response?.data?.reduce(
+          (acc: CountryCodeInterface[], responseData: CountryCodeInterface) => {
+            if (
+              !acc.some(
+                (data: CountryCodeInterface) =>
+                  data.dial_code === responseData.dial_code
+              )
+            ) {
+              acc.push(responseData);
+            }
+            return acc;
+          },
+          []
+        );
         setCountryCode(UniqCodes);
+        setValue(
+          "CountryCode",
+          response?.data?.find(
+            (data: CountryCodeInterface) => data?.dial_code === "+91"
+          )?.dial_code
+        );
       }
     } catch (error) {
-      toast.error(error?.message);
+      if (axios.isAxiosError(error)) {
+        const axiosError = error as AxiosError<{ message: string }>;
+        toast.error(axiosError?.message);
+      }
     }
   };
 
@@ -161,7 +174,7 @@ const ContactUsForm = () => {
                       ) => {
                         return (
                           <SelectItem
-                            key={data?.code + data?.name}
+                            key={data?.code + data?.name + index}
                             value={data?.dial_code}
                           >
                             {`  ${data?.code} ${data?.dial_code}`}
