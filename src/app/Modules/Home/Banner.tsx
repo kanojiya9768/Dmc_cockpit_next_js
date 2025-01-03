@@ -9,7 +9,7 @@ import { leftVarient, rightVarient } from "@/lib/framer_variants";
 
 const HomeBanner = () => {
   return (
-    <div className="w-full h-max py-14 bg-primary-color bg-[-100px_50px] flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between items-center px-8 sm:px-20 relative">
+    <div className="w-full h-max py-14 bg-primary-color bg-[-100px_50px] flex lg:flex-row flex-col lg:gap-0 gap-10 justify-between 2xl:justify-center items-center px-8 sm:px-20 relative">
       <motion.div
         variants={leftVarient}
         initial="hidden"
