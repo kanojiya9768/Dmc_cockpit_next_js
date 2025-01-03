@@ -163,7 +163,7 @@ const ContactUsForm = () => {
                   defaultValue="+91"
                   onValueChange={(e) => setValue("CountryCode", e)}
                 >
-                  <SelectTrigger>
+                  <SelectTrigger className="w-max py-[20px] sm:p-[24px] bg-light-input-color">
                     <SelectValue placeholder="Dial Code" />
                   </SelectTrigger>
                   <SelectContent className="h-56">
