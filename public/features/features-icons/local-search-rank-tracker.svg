@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48"
+  height="59" viewBox="0 0 48 59">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_9157" data-name="Rectangle 9157" width="48" height="59"
+        transform="translate(0.008 0.106)" fill="none" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+    </clipPath>
+  </defs>
+  <g id="Group_10048" data-name="Group 10048" transform="translate(-0.008 -0.106)">
+    <g id="Group_10047" data-name="Group 10047" transform="translate(0 0)"
+      clip-path="url(#clip-path)">
+      <path id="Path_20197" data-name="Path 20197"
+        d="M100.811,384C93.509,384,88,386.542,88,389.913s5.509,5.913,12.811,5.913,12.811-2.542,12.811-5.913S108.113,384,100.811,384"
+        transform="translate(-77.214 -336.955)" fill="#02c39a" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20198" data-name="Path 20198"
+        d="M204.811,389.913c0,3.37-5.509,5.913-12.811,5.913V384c7.3,0,12.811,2.542,12.811,5.913"
+        transform="translate(-168.403 -336.955)" fill="#00a896" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20199" data-name="Path 20199"
+        d="M46.317,0H.985A.988.988,0,0,0,0,.985V38.433a.988.988,0,0,0,.985.985H46.317a.988.988,0,0,0,.985-.985V.985A.988.988,0,0,0,46.317,0"
+        transform="translate(-0.054 -0.257)" fill="#e6e6e6" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20200" data-name="Path 20200"
+        d="M215.651.985V38.433a.988.988,0,0,1-.985.985H192V0h22.666a.988.988,0,0,1,.985.985"
+        transform="translate(-168.403 -0.257)" fill="#ccc" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20201" data-name="Path 20201"
+        d="M86.78,144A14.9,14.9,0,0,0,72,158.989c0,10.554,13.58,21.769,14.161,22.232a.98.98,0,0,0,1.242.01c.581-.473,14.161-11.569,14.161-22.242A14.9,14.9,0,0,0,86.78,144Z"
+        transform="translate(-63.183 -126.519)" fill="#fc4f88" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20202" data-name="Path 20202"
+        d="M206.782,158.989c0,10.673-13.58,21.769-14.161,22.242a.993.993,0,0,1-.621.217V144a14.9,14.9,0,0,1,14.782,14.989"
+        transform="translate(-168.403 -126.519)" fill="#fc297a" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20203" data-name="Path 20203"
+        d="M46.317,0H.985A.988.988,0,0,0,0,.985V13.8H47.3V.985A.988.988,0,0,0,46.317,0"
+        transform="translate(-0.054 -0.257)" fill="#0aebf8" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20204" data-name="Path 20204"
+        d="M215.651.985V13.8H192V0h22.666a.988.988,0,0,1,.985.985"
+        transform="translate(-168.403 -0.257)" fill="#05c6c6" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20205" data-name="Path 20205"
+        d="M306.956,37.913a2.956,2.956,0,1,1,2.956-2.956,2.956,2.956,0,0,1-2.956,2.956"
+        transform="translate(-266.607 -28.315)" fill="#05668d" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20206" data-name="Path 20206"
+        d="M242.956,37.913a2.956,2.956,0,1,1,2.956-2.956,2.956,2.956,0,0,1-2.956,2.956"
+        transform="translate(-210.49 -28.315)" fill="#05668d" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20207" data-name="Path 20207"
+        d="M46.782,37.913h-13.8A.986.986,0,0,1,32,36.927V32.985A.985.985,0,0,1,32.985,32h13.8a.986.986,0,0,1,.985.985v3.942a.986.986,0,0,1-.985.985"
+        transform="translate(-28.112 -28.315)" fill="#028090" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20208" data-name="Path 20208"
+        d="M142.9,200a6.9,6.9,0,1,0,6.9,6.9,6.9,6.9,0,0,0-6.9-6.9"
+        transform="translate(-119.301 -175.621)" fill="#ff0" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+      <path id="Path_20209" data-name="Path 20209"
+        d="M198.9,206.9a6.906,6.906,0,0,1-6.9,6.9V200a6.906,6.906,0,0,1,6.9,6.9"
+        transform="translate(-168.403 -175.621)" fill="#ffda00" stroke="rgba(112,112,112,0.15)"
+        stroke-width="1" />
+    </g>
+  </g>
+</svg>

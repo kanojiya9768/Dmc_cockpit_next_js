@@ -4,10 +4,15 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { features } from "@/json/feature";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { bottomVarient } from "@/lib/framer_variants";
+import { bottomVarient, leftVarient } from "@/lib/framer_variants";
 
 export const FeaturesSection = () => {
-  const typesoffeatures = ["SEO", "Performance Marketing", "Reporting"];
+  const typesoffeatures = [
+    "SEO",
+    "Social Media Management",
+    "Performance Marketing",
+    "Reporting",
+  ];
   const [selectedfeatures, setselectedfeatures] = useState("SEO");
 
   const currentfeaturedetails = useMemo(() => {
@@ -25,7 +30,7 @@ export const FeaturesSection = () => {
   }, [selectedfeaturesOption]);
 
   return (
-    <div className="feature_section_Container lg:h-[1000px]">
+    <div className="feature_section_Container lg:h-[1230px] 2xl:h-[1050px]">
       <p className="heading">Features</p>
       <p className="description">{`Here's Few More Reasons To Use DM Cockpit`}</p>
 
@@ -50,19 +55,19 @@ export const FeaturesSection = () => {
 
       {/* //all features listing  */}
       <motion.div
-        variants={bottomVarient}
-        initial="hidden"
-        whileInView={"visible"}
+        key={selectedfeatures}
+        variants={leftVarient}
         transition={{ duration: 0.7 }}
-        viewport={{ margin: "0px 0px -100px 0px" }}
-        className="flex flex-wrap justify-center items-center gap-[20px] xl:gap-[60px] mt-[40px] w-full sm:px-0 px-4"
+        initial="hidden"
+        animate="visible"
+        className="w-full flex flex-wrap justify-center items-center gap-[20px] xl:gap-[60px] mt-[40px] sm:px-10 px-4"
       >
         {currentfeaturedetails?.features?.map((data, index) => {
           return (
             <div
               onClick={() => setselectedfeaturesOption(data)}
               key={index}
-              className={`flex flex-col justify-center items-center gap-[10px] border-[1.5px] border-primary-color p-[20px] w-[150px] h-[160px] rounded-[10px] cursor-pointer ${
+              className={`flex flex-col justify-center items-center gap-[10px] border-[1.5px] border-primary-color p-[20px] w-[150px] sm:w-max h-max sm:h-[160px] rounded-[10px] cursor-pointer ${
                 selectedfeaturesOption?.featureName === data?.featureName
                   ? "feature_div_active"
                   : "bg-white border-none"
@@ -71,13 +76,13 @@ export const FeaturesSection = () => {
               <Image
                 width={1000}
                 height={1000}
-                src={data?.featureLogo}
+                src={data?.featuresIcon}
                 alt="featureLogo"
-                className="w-[60px] h-[50px] object-contain"
+                className="w-[60px] h-[60px] object-contain"
               />
               <p
                 style={{ textAlign: "center" }}
-                className="font-extrabold [word-break:keep-all] w-[150px]"
+                className="font-bold [word-break:keep-all] px-2"
               >
                 {data?.featureName}
               </p>
@@ -93,7 +98,7 @@ export const FeaturesSection = () => {
           height={1000}
           src={"/features/feature-animation-line.png"}
           alt="FeatureSectionAnimationLine"
-          className="lg:block hidden absolute -left-[450px] -top-[40px] lg:top-0  lg:-left-[430px] mix-blend-multiply !overflow-hidden"
+          className="lg:block hidden absolute -left-[450px] -top-[40px] lg:-top-3 lg:-left-[420px] 2xl:-left-[380px] mix-blend-multiply !overflow-hidden"
         />
         {/* div.featureoption_details  */}
         <motion.div
@@ -121,7 +126,7 @@ export const FeaturesSection = () => {
               </button>
             </div>
             <img
-              src={"/features/featurelogo.svg"}
+              src={currentFeatureOptiondetails?.featureLogo}
               className="right_image w-[350px]"
               alt="right_image"
             />
@@ -132,7 +137,7 @@ export const FeaturesSection = () => {
         <img
           src={"/features/feature-animation-line.png"}
           alt="FeatureSectionAnimationLine"
-          className="lg:block hidden absolute top-[700px] lg:top-[400px] -right-[425px] mix-blend-multiply !overflow-hidden"
+          className="lg:block hidden absolute top-[700px] lg:top-[430px] -right-[450px] mix-blend-multiply !overflow-hidden"
         />
       </div>
     </div>

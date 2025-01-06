@@ -1,5 +1,3 @@
-
-
 export const features = [
   {
     featureHeading: "SEO",
@@ -7,38 +5,42 @@ export const features = [
       {
         id: 1,
         featureName: "Rank Tracking",
-        featureLogo: "/features/features-img-1.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
+        featureLogo: "/features/rank-tracking.png",
+        featuresIcon: "/features/features-icons/rank-tracking.png",
+        featureDescription:
+          "Monitor daily changes in your target keywords within your chosen location. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
       },
       {
         id: 2,
-        featureName: "Website Audit",
-        featureLogo: "/features/features-img-2.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
+        featureName: "Keyword Research",
+        featureLogo: "/features/keyword-research.png",
+        featuresIcon: "/features/features-icons/keyword-research.png",
+        featureDescription:
+          "Drive traffic to your website by discovering the most effective keywords. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
       },
       {
         id: 3,
-        featureName: "Analytics & Reporting",
-        featureLogo: "/features/features-img-3.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
+        featureName: "On Page SEO",
+        featureLogo: "/features/on-page-seo.png",
+        featuresIcon: "/features/features-icons/on-page-seo.png",
+        featureDescription:
+          "Enhance your site's health and SEO performance with fresh suggestions. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
       },
       {
         id: 4,
-        featureName: "Performance Marketing",
-        featureLogo: "/features/features-img-4.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
+        featureName: "Website Audit Tool",
+        featureLogo: "/features/website-audit-tool.png",
+        featuresIcon: "/features/features-icons/website-audit-tool.png",
+        featureDescription:
+          "Streamline Your Website's Success: Investigate, Assess, and Refine with Our Website Audit Tool. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
       },
       {
         id: 5,
-        featureName: "Social Media Scheduling And Insight ",
-        featureLogo: "/features/features-img-5.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
-        id: 6,
         featureName: "Competitor Analysis",
-        featureLogo: "/features/features-img-6.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
+        featureLogo: "/features/competitor-analysis.png",
+        featuresIcon: "/features/features-icons/competitor-analysis.png",
+        featureDescription:
+          "Closely monitor keyword positions and adopt successful strategies from your competitors. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
       },
     ],
   },
@@ -46,40 +48,51 @@ export const features = [
     featureHeading: "Performance Marketing",
     features: [
       {
-        id: 1,
-        featureName: "Rank Tracking",
-        featureLogo: "/features/features-img-1.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
-        id: 2,
-        featureName: "Website Audit",
-        featureLogo: "/features/features-img-2.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
-        id: 3,
-        featureName: "Analytics & Reporting",
-        featureLogo: "/features/features-img-3.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
-        id: 4,
-        featureName: "Performance Marketing",
-        featureLogo: "/features/features-img-4.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
-        id: 5,
-        featureName: "Social Media Scheduling And Insight ",
-        featureLogo: "/features/features-img-5.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
         id: 6,
-        featureName: "Competitor Analysis",
-        featureLogo: "/features/features-img-6.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
+        featureName: "Google Ads",
+        featureLogo: "/features/google-ads.png",
+        featuresIcon: "/features/features-icons/google-ads.png",
+        featureDescription:
+          "Effortlessly track the daily performance of your Google Ads campaigns with our performance analysis tool. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
+      },
+      {
+        id: 7,
+        featureName: "Meta Ads",
+        featureLogo: "/features/meta-ads.png",
+        featuresIcon: "/features/features-icons/meta-ads.png",
+        featureDescription:
+          "Stay informed about daily metrics to fine-tune your meta advertising strategy and maximize the impact of your campaigns. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
+      },
+    ],
+  },
+  {
+    featureHeading: "Social Media Management",
+    features: [
+      {
+        id: 8,
+        featureName: "Facebook Insights & Management Tool",
+        featureLogo: "/features/facebook-insights-management-tool.png",
+        featuresIcon:
+          "/features/features-icons/facebook-insights-management-tool.png",
+        featureDescription:
+          "Simplify. Engage. Excel - Master Your Facebook Strategy with DM Cockpit. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
+      },
+      {
+        id: 9,
+        featureName: "Instagram Insights And Scheduling Tool",
+        featureLogo: "/features/instagram-insights-and-scheduling-tool.png",
+        featuresIcon:
+          "/features/features-icons/instagram-insights-and-scheduling-tool.png",
+        featureDescription:
+          "Crack the Instagram Code: Engagement & Analytics Made Easy. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
+      },
+      {
+        id: 10,
+        featureName: "LinkedIn Reporting Tool",
+        featureLogo: "/features/linkedin-reporting-tool.png",
+        featuresIcon: "/features/features-icons/linkedin-reporting-tool.png",
+        featureDescription:
+          "Master LinkedIn: Analytics, Insights, and Beyond. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
       },
     ],
   },
@@ -87,40 +100,20 @@ export const features = [
     featureHeading: "Reporting",
     features: [
       {
-        id: 1,
-        featureName: "Rank Tracking",
-        featureLogo: "/features/features-img-1.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
+        id: 11,
+        featureName: "Google Analytics",
+        featureLogo: "/features/google-analytics.png",
+        featuresIcon: "/features/features-icons/google-analytics.png",
+        featureDescription:
+          "Dive deep into website metrics, user engagement, conversion data & Unlock the power of data with our dedicated Google Analytics reporting tool. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
       },
       {
-        id: 2,
-        featureName: "Website Audit",
-        featureLogo: "/features/features-img-2.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
-        id: 3,
-        featureName: "Analytics & Reporting",
-        featureLogo: "/features/features-img-3.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
-        id: 4,
-        featureName: "Performance Marketing",
-        featureLogo: "/features/features-img-4.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
-        id: 5,
-        featureName: "Social Media Scheduling And Insight ",
-        featureLogo: "/features/features-img-5.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
-      },
-      {
-        id: 6,
-        featureName: "Competitor Analysis",
-        featureLogo: "/features/features-img-6.png",
-        featureDescription: `DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking. It Allows You To Track The Performance Of Your Website's Keywords Over Time And Identify`,
+        id: 12,
+        featureName: "Google Search Console",
+        featureLogo: "/features/google-search-console.png",
+        featuresIcon: "/features/features-icons/google-search-console.png",
+        featureDescription:
+          "Monitor search visibility, identify keywords driving traffic, and harness the insights to refine your SEO strategy and boost your online presence. DM Cockpit Makes It Easy To Stay On Top Of Your Keyword Rankings With 100% Accurate Tracking.",
       },
     ],
   },
