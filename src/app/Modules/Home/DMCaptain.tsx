@@ -38,7 +38,7 @@ export const DMCaptain = () => {
       variants={bottomVarient}
       initial="hidden"
       whileInView={"visible"}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 0.6 }}
       viewport={{ margin: "0px 0px -100px 0px" }}
       className="DMCaptainContainer w-full py-10 flex flex-col justify-center items-center gap-[20px] bg-very-light-violet-color drop-shadow-sm"
     >
@@ -47,7 +47,7 @@ export const DMCaptain = () => {
       {/* DNCaptain Main div is here   */}
       <div className="DMCaptainMainDiv w-full h-auto md:h-[600px] flex md:flex-row flex-col md:gap-0 gap-[30px] md:p-0 p-[20px] justify-evenly items-center">
         {/* //first div  */}
-        <div className="firstDiv flex md:flex-col flex-row md:flex-nowrap flex-wrap md:justify-normal md:items-start justify-center items-center gap-[50px]">
+        <div className="firstDiv flex md:flex-col flex-row md:flex-nowrap flex-wrap md:justify-normal md:items-end justify-center items-center gap-[50px]">
           {FirstDMCaptain?.map((data, index) => {
             return (
               <div

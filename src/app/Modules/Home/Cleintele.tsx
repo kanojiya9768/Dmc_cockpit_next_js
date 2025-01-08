@@ -10,7 +10,7 @@ export const Cleintele = () => {
       variants={bottomVarient}
       initial="hidden"
       whileInView={"visible"}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 0.6 }}
       viewport={{ margin: "0px 0px -100px 0px" }}
       className="Cleintele_Container flex flex-col justify-center items-center mt-[100px]"
     >

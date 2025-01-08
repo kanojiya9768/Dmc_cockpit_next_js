@@ -69,9 +69,9 @@ Design. This Will Just Slow Down The Design Process.
       variants={bottomVarient}
       initial="hidden"
       whileInView={"visible"}
-      transition={{ duration: 0.7 }}
+      transition={{ duration: 0.6 }}
       viewport={{ margin: "0px 0px -100px 0px" }}
-      className="w-full h-[500px] mx-auto flex flex-col mt-32 justify-center items-center relative"
+      className="w-full h-[500px] mx-auto flex flex-col mt-20 justify-center items-center relative"
     >
       <p className="heading">Testimonials</p>
       <p className="description !mt-0" style={{ fontSize: "18px" }}>
@@ -91,8 +91,8 @@ Design. This Will Just Slow Down The Design Process.
         {getVisibleSlides().map((item, index) => {
           return (
             <motion.div
-              initial={{ scale: 0.75 }}
-              animate={{ scale: index === 1 ? 1 : 0.75 }}
+              initial={{ scale: 0.65 }}
+              animate={{ scale: index === 1 ? 1 : 0.65 }}
               transition={{ duration: 1 }}
               key={`${item.profile + activeIndex}`}
               className="relative"

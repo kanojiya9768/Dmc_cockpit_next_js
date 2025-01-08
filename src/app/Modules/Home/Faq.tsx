@@ -23,7 +23,7 @@ export const Faq = () => {
         variants={bottomVarient}
         initial="hidden"
         whileInView={"visible"}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.6 }}
         viewport={{ margin: "0px 0px -100px 0px" }}
         className="faq_parent_div w-full grid grid-cols-1 md:grid-cols-2 md:gap-[50px] mt-[40px] px-[20px] sm:px-[50px] lg:px-[100px]"
       >

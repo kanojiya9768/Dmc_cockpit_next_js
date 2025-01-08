@@ -11,6 +11,7 @@ import { StillhaveaQuery } from "./Modules/Home/StillhaveaQuery";
 import { BannerSection24_7 } from "./Modules/Home/BannerSection24_7";
 import { Support } from "./Modules/Home/Support";
 import Testimonial from "./Modules/Home/Tesimonials";
+import ContactUsBanner from "./Modules/Home/ContactUsBanner";
 
 const page = () => {
   return (
@@ -33,6 +34,9 @@ const page = () => {
       {/* //faq section  */}
       <Faq />
 
+      {/* //query section  */}
+      <StillhaveaQuery />
+
       {/* //Testimonial */}
       <Testimonial />
 
@@ -42,8 +46,8 @@ const page = () => {
       {/* //integrated with  */}
       <DmCockpit_Integrated_With />
 
-      {/* //query section  */}
-      <StillhaveaQuery />
+      {/* //contact us banner  */}
+      <ContactUsBanner />
 
       {/* //24/7 banner  */}
       <BannerSection24_7 />

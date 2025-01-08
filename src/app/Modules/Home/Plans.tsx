@@ -106,9 +106,9 @@ export const Plans = () => {
         variants={bottomVarient}
         initial="hidden"
         whileInView={"visible"}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.6 }}
         viewport={{ margin: "0px 0px -100px 0px" }}
-        className="all_plans_Container px-[20px] sm:px-[50px] grid  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:grid-cols-4 w-full mt-6 md:mt-16 gap-[20px]"
+        className="all_plans_Container px-[20px] sm:px-[50px] 2xl:px-40 grid  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:grid-cols-4 w-full mt-6 md:mt-16 gap-[20px]"
       >
         {allPlans?.map((plan, id) => {
           return (
