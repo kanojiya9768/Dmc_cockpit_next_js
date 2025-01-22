@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "./Modules/Home/Navbar";
+import Navbar from "./Modules/Constant/Navbar";
 import { Toaster } from "react-hot-toast";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import LoggedInUserProvider from "./Modules/Providers/LoggedInUserProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,9 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Navbar />
-        {children}
-        <Toaster position="bottom-right" />
+        <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID || ""}>
+          <LoggedInUserProvider>
+            <Navbar />
+            {children}
+            <Toaster position="bottom-right" />
+
+          </LoggedInUserProvider>
+        </GoogleOAuthProvider>
       </body>
     </html>
   );

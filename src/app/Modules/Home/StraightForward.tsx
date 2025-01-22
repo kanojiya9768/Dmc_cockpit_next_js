@@ -36,11 +36,11 @@ export const StraightForward = () => {
   return (
     <div className="flex flex-col justify-center items-center mt-[80px]">
       <p className="heading">As straightforward as it gets</p>
-      <p className="description sm:w-[60%] md:w-[50%] w-[85%]">
+      {/* <p className="description sm:w-[60%] md:w-[50%] w-[85%]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation
-      </p>
+      </p> */}
 
       {/* //points  */}
       <motion.div
@@ -93,9 +93,8 @@ export const StraightForward = () => {
               </p>
 
               <div
-                className={`w-28 h-28 transition-all duration-500 ${
-                  active == `${index}` ? "bg-primary-color" : "bg-white"
-                } border-[1px] border-light-primary-color  rounded-full absolute -top-14 grid place-items-center`}
+                className={`w-28 h-28 transition-all duration-500 ${active == `${index}` ? "bg-primary-color" : "bg-white"
+                  } border-[1px] border-light-primary-color  rounded-full absolute -top-14 grid place-items-center`}
               >
                 <Image
                   src={data?.icon}

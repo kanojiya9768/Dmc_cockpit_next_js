@@ -1,19 +1,19 @@
 "use client";
-import React from "react";
 import { IoIosRocket } from "react-icons/io";
 import Image from "next/image";
-import { bottomVarient } from "@/lib/framer_variants";
-import { motion } from "framer-motion";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import GoogleLogIn from "../Elements/GoogleLogin";
+import Link from "next/link";
+import { LoggedInUserStore } from "../../../../store/store";
+import Cookies from "js-cookie";
 
 const HomeBanner = () => {
+
+  const { LoggedInUser } = LoggedInUserStore()
+
   return (
-    <motion.div
-      variants={bottomVarient}
-      initial="hidden"
-      whileInView={"visible"}
-      transition={{ duration: 0.6 }}
-      viewport={{ margin: "0px 0px -100px 0px" }}
-      className="w-full bg-[url('/banner/banner-bg.png')] bg-cover -z-10 bg-no-repeat relative flex flex-col justify-center items-center py-20 gap-3 px-4"
+    <div
+      className="w-full 2xl:h-[60dvh] bg-[url('/banner/banner-bg.png')] bg-cover bg-no-repeat relative flex flex-col justify-center items-center py-20 gap-3 px-4"
     >
       <div className="flex gap-2 text-center">
         <p className="md:text-4xl max-[350px]:text-xl text-2xl sm:text-3xl flex gap-2 font-bold relative">
@@ -49,28 +49,46 @@ const HomeBanner = () => {
       </p>
 
       {/* //button start free trial */}
-      <div className="flex max-[470px]:flex-col flex-row items-center max-[470px]:gap-6 gap-3 my-8">
-        <div className="rounded-[90px] cursor-pointer px-6 py-3 w-max bg-primary-color text-[white] max-[500px]:text-sm text-base flex gap-[4px] items-center">
+      <div className="flex max-[470px]:flex-col flex-row items-center max-[470px]:gap-3 gap-3 mt-8 mb-2">
+        <Link href='#plans-section' className="rounded-[90px] cursor-pointer px-6 py-3 w-max bg-primary-color text-[white] max-[500px]:text-sm text-base flex gap-[4px] items-center">
           <IoIosRocket className="text-[25px] text-green-color" /> Start Your{" "}
           <p style={{ fontWeight: "500" }} className="text-green-color">
             FREE
           </p>{" "}
           Trial Now
-        </div>
-        <div className="flex items-center gap-2">
-          <Image
-            src={"/banner/star-face.png"}
-            width={1000}
-            height={1000}
-            className="w-8 object-contain"
-            alt="stars-shine"
-          />
-          <div className="text-sm">
-            <p>No Credit</p>
-            <p>Card Needed!</p>
-          </div>
+        </Link>
+
+
+        {
+          LoggedInUser?.sCustomerId && Cookies.get('dmc-token')
+            ?
+            <Link href='#plans-section' className="rounded-[90px] cursor-pointer px-20 py-3 w-max bg-green-color text-[white] max-[500px]:text-sm text-base flex gap-[4px] items-center">
+              Dashboard
+            </Link>
+            :
+
+            <GoogleOAuthProvider
+              clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ""}
+            >
+              <GoogleLogIn />
+            </GoogleOAuthProvider>
+        }
+      </div>
+      <div className="flex items-center gap-2">
+        <Image
+          src={"/banner/star-face.png"}
+          width={1000}
+          height={1000}
+          className="w-8 object-contain"
+          alt="stars-shine"
+        />
+        <div className="text-sm">
+          <p>No Credit</p>
+          <p>Card Needed!</p>
         </div>
       </div>
+
+
 
       <div className="text-center">
         <p>Start tracking your ranking today with our special trial offer.</p>
@@ -133,7 +151,7 @@ const HomeBanner = () => {
           />{" "}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

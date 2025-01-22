@@ -5,22 +5,22 @@ export const Routes = [
   },
   {
     title: "features",
-    route: "/features",
+    route: "#feature-section",
   },
   {
     title: "Pricing",
-    route: "/pricing",
+    route: "#plans-section",
   },
-  {
-    title: "resources",
-    route: "/resources",
-  },
+  // {
+  //   title: "resources",
+  //   route: "#",
+  // },
   {
     title: "Ai Chatbot",
-    route: "/ai-chatbot",
+    route: "#dm-captain",
   },
   {
     title: "Contact Us",
-    route: "#contact-us",
+    route: "#contact-section",
   },
 ];

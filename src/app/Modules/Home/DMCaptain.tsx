@@ -40,9 +40,13 @@ export const DMCaptain = () => {
       whileInView={"visible"}
       transition={{ duration: 0.6 }}
       viewport={{ margin: "0px 0px -100px 0px" }}
+      id="dm-captain"
       className="DMCaptainContainer w-full py-10 flex flex-col justify-center items-center gap-[20px] bg-very-light-violet-color drop-shadow-sm"
     >
-      <p className="heading">DM Captain! </p>
+      <div className="flex flex-col justify-center items-center gap-1">
+        <p className="heading gap-1 max-[400px]:text-[18x] text-lg sm:text-xl md:text-2xl lg:text-3xl">DM Captain - <span className="text-green-color">Your AI Chatbot on WhatsApp</span> </p>
+        <p className="text-lg sm:text-xl font-medium">Instant Report, Anytime, Anywhere</p>
+      </div>
 
       {/* DNCaptain Main div is here   */}
       <div className="DMCaptainMainDiv w-full h-auto md:h-[600px] flex md:flex-row flex-col md:gap-0 gap-[30px] md:p-0 p-[20px] justify-evenly items-center">

@@ -1,5 +1,3 @@
-import React from "react";
-import HomeBanner from "./Modules/Home/Banner";
 import { FeaturesSection } from "./Modules/Home/FeaturesSection";
 import { DMCaptain } from "./Modules/Home/DMCaptain";
 import { Plans } from "./Modules/Home/Plans";
@@ -12,12 +10,18 @@ import { BannerSection24_7 } from "./Modules/Home/BannerSection24_7";
 import { Support } from "./Modules/Home/Support";
 import Testimonial from "./Modules/Home/Tesimonials";
 import ContactUsBanner from "./Modules/Home/ContactUsBanner";
+import NewHomeBanner from "./Modules/Home/NewBanner";
+import ContactUsHorizontalBanner from "./Modules/Home/ContactUsHorizonalBanner";
 
 const page = () => {
   return (
     <>
       {/* //home banner  */}
-      <HomeBanner />
+      <NewHomeBanner />
+
+
+      {/* //contact us banner */}
+      <ContactUsHorizontalBanner />
 
       {/* //feature section  */}
       <FeaturesSection />

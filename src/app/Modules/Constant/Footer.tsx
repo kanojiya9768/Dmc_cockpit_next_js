@@ -1,4 +1,3 @@
-import React from "react";
 const FooterData = [
   {
     title: "DM Cockpit",
@@ -95,8 +94,8 @@ export const Footer = () => {
         {FooterData?.map((links, index) => {
           return (
             <div className="Links_Container" key={index}>
-              <p className="LinkHeading">{links?.title}</p>
-              <div className="Links_pages">
+              <p className="LinkHeading text-xs sm:text-[17px] w-max">{links?.title}</p>
+              <div className="Links_pages sm:text-base text-xs">
                 {links?.pages?.map((pages, idx) => {
                   return (
                     <a

@@ -1,5 +1,4 @@
-import React from "react";
-import { Footer } from "./Footer";
+import { Footer } from "../Constant/Footer";
 import CopyrightFooter from "./CopyrightFooter";
 
 const SupportData = [
@@ -25,11 +24,10 @@ export const Support = () => {
           return (
             <div
               key={index}
-              className={`supportDiv flex lg:flex-row flex-col *lg:justify-start justify-center items-center gap-[15px] text-[20px]  lg:px-10 2xl:px-24 ${
-                index < 2
+              className={`supportDiv flex lg:flex-row flex-col *lg:justify-start justify-center items-center gap-[15px] text-[20px]  lg:px-10 2xl:px-24 ${index < 2
                   ? "xl:border-r xl:border-dashed xl:border-r-primary-color"
                   : ""
-              }`}
+                }`}
             >
               <img src={suport?.logo} alt="logo" className="sm:w-16 w-10" />
               <p className="support_title sm:w-max text-center sm:text-[18px] text-sm">

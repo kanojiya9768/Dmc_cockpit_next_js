@@ -1,16 +1,17 @@
 "use client";
-import React from "react";
 import { IoIosRocket } from "react-icons/io";
 import ContactUsForm from "./ContactUsForm";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { leftVarient, rightVarient } from "../../../lib/framer_variants";
+import { bottomVarient } from "../../../lib/framer_variants";
+import Link from "next/link";
+import { FaCheckCircle } from "react-icons/fa";
 
 const ContactUsBanner = () => {
   return (
-    <div className="w-full h-max my-20 bg-[url('/banner/contact-us-banner-bg.png')] bg-cover bg-[-100px_50px] flex lg:flex-row flex-col  gap-4 sm:gap-10 lg:gap-20 justify-between xl:justify-evenly items-center px-6 sm:px-20 py-32 relative">
+    <div id="contact-section" className="w-full h-max mb-20 bg-[url('/banner/contact-us-banner-bg.png')] bg-cover bg-[-100px_50px] flex lg:flex-row flex-col  gap-4 sm:gap-10 lg:gap-20 justify-between xl:justify-evenly items-center px-6 sm:px-20 py-32 relative">
       <motion.div
-        variants={leftVarient}
+        variants={bottomVarient}
         initial="hidden"
         whileInView={"visible"}
         transition={{ duration: 0.6 }}
@@ -44,15 +45,33 @@ const ContactUsBanner = () => {
           seamless growth.
         </p>
 
+        <div className="grid md:grid-cols-2 my-4 gap-3">
+          {
+            ["Rank Tracking & Analysis",
+              "Website Audit Tool",
+              "Performance Marketing Insight ",
+              "Draft, Schedule & Post Content on Social",
+
+              "Automate Client Reporting", "Seamlessly Manage Your Clients with CRM"]?.map((data, index) => {
+                return (
+                  <div key={index} className="flex items-center gap-2 text-[15px] 2xl:text-[18px] md:w-max font-poppins font-medium">
+                    <FaCheckCircle className="text-green-color" />
+                    <p>{data}</p>
+                  </div>
+                )
+              })
+          }
+        </div>
+
         {/* //button start free trial */}
         <div className="flex max-[470px]:flex-col flex-row items-center max-[470px]:gap-6 gap-3 my-8">
-          <div className="rounded-[90px] px-6 py-3 w-max bg-primary-color text-[white] max-[500px]:text-sm text-base flex gap-[4px] items-center">
+          <Link href='#plans-section' className="rounded-[90px] px-6 py-3 w-max bg-primary-color text-[white] max-[500px]:text-sm text-base flex gap-[4px] items-center">
             <IoIosRocket className="text-[25px] text-green-color" /> Start Your{" "}
             <p style={{ fontWeight: "500" }} className="text-green-color">
               FREE
             </p>{" "}
             Trial Now
-          </div>
+          </Link>
           <div className="flex items-center gap-2">
             <Image
               src={"/banner/star-face.png"}
@@ -62,15 +81,15 @@ const ContactUsBanner = () => {
               alt="stars-shine"
             />
             <div className="text-sm">
-              <p>No Credit</p>
-              <p>Card Needed!</p>
+              <p>No Credit Card Needed!</p>
+              {/* <p></p> */}
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.div >
 
       <motion.div
-        variants={rightVarient}
+        variants={bottomVarient}
         initial="hidden"
         whileInView={"visible"}
         transition={{ duration: 0.6 }}
@@ -79,7 +98,7 @@ const ContactUsBanner = () => {
       >
         <ContactUsForm />
       </motion.div>
-    </div>
+    </div >
   );
 };
 

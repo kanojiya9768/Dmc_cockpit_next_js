@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import Marquee from "react-fast-marquee";
 
 const companies = [
@@ -36,7 +35,7 @@ export const DmCockpit_Integrated_With = () => {
         })}
       </Marquee>
 
-      <Marquee autoFill={true} pauseOnHover={true} direction="right">
+      {/* <Marquee autoFill={true} pauseOnHover={true} direction="right">
         {companies?.map((company, index) => {
           return (
             <div
@@ -53,7 +52,7 @@ export const DmCockpit_Integrated_With = () => {
             </div>
           );
         })}
-      </Marquee>
+      </Marquee> */}
     </div>
   );
 };

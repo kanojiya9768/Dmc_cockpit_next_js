@@ -2,7 +2,6 @@
 import { Input } from "@/components/ui/input";
 import { bottomVarient } from "@/lib/framer_variants";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import React from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
@@ -58,7 +57,7 @@ export const StillhaveaQuery = () => {
           SEND <MdKeyboardDoubleArrowRight style={{ fontSize: "20px" }} />
         </button>
 
-        <div className="text-sm w-full flex items-center my-2 gap-2 sm:gap-4">
+        {/* <div className="text-sm w-full flex items-center my-2 gap-2 sm:gap-4">
           <div className="flex relative  max-[400px]:w-[190px] w-[110px]">
             <Image
               src={"/banner/face-1.png"}
@@ -93,9 +92,9 @@ export const StillhaveaQuery = () => {
             <p>Join 1000+ Marketers.</p>
             <p>already using DMCockpit</p>
           </div>
-        </div>
+        </div> */}
 
-        <p className="text-white flex gap-1 sm:flex-row flex-col sm:items-center sm:w-max">
+        {/* <p className="text-white flex gap-1 sm:flex-row flex-col sm:items-center sm:w-max">
           <span className="flex items-center">
             <Image
               src={"/plans-section/stars-shine.svg"}
@@ -107,7 +106,7 @@ export const StillhaveaQuery = () => {
             Features That Fulfills Your
           </span>
           <span className="font-medium">Digital Marketing Needs</span>
-        </p>
+        </p> */}
       </form>
       <img
         src={"/querysection/charts-2.png"}

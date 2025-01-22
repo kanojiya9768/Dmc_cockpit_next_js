@@ -343,7 +343,6 @@ body {
 }
 
 .middle_Links_Container {
-  width: max-content;
   display: flex;
   gap: 130px;
 }
@@ -372,8 +371,6 @@ body {
 
 .middle_Links_Container > .Links_Container > .LinkHeading {
   font-weight: 800;
-  font-size: 17px;
-  width: max-content;
 }
 
 .Links_Container > .Links_pages {
@@ -381,7 +378,6 @@ body {
   flex-direction: column;
   gap: 25px;
   text-transform: capitalize;
-  font-size: 15px;
 }
 
 .Contact_Link_Container {
@@ -461,4 +457,9 @@ body {
   top: 33%;
   right: -5.5px;
   z-index: 100;
+}
+
+.faqAnswers > p > a {
+  text-decoration: underline !important;
+  color: rgb(58, 58, 173);
 }

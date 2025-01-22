@@ -1,7 +1,7 @@
 "use client";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
-import React, {
+import {
   startTransition,
   useActionState,
   useEffect,
@@ -26,6 +26,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { CountryDialCodes } from "@/json/country-codes";
 
 export const initialState: SendMailAPIResponse = {
   message: "",
@@ -50,6 +51,9 @@ const ContactUsForm = () => {
   } = useForm<ContactUsFormInterface>({
     resolver: zodResolver(ContactUsSchema),
     mode: "onChange", // Integrate the Zod schema
+    defaultValues: {
+      "PurposeOfCall": "Learn about features in other subscription plans"
+    }
   });
 
   //on submit function
@@ -113,6 +117,12 @@ const ContactUsForm = () => {
     FetchCountryCode();
   }, []);
 
+  console.log(errors);
+  console.log(watch());
+
+
+
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -140,11 +150,11 @@ const ContactUsForm = () => {
             placeholder="Full Name"
             value={watch("FullName")}
             {...register("FullName")}
-            className="bg-light-input-color outline-none border-none py-[20px] sm:py-[24px] sm:px-[12px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
+            className="bg-light-input-color outline-none border-none sm:text-base text-sm py-[20px] sm:py-[24px] sm:px-[12px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
           />
 
           {errors.FullName && (
-            <span className="text-red-500 text-sm">
+            <span className="text-red-500 text-xs sm:text-sm">
               {errors.FullName.message}
             </span>
           )}
@@ -155,8 +165,6 @@ const ContactUsForm = () => {
             className="flex items-center gap-2"
           >
             <div className="left-[10px] flex items-center text-[13px] cursor-pointer">
-              {/* <p>+91</p>
-              <IoMdArrowDropdown className="text-[18px]" /> */}
               <div className="w-max">
                 <Select
                   required
@@ -191,39 +199,180 @@ const ContactUsForm = () => {
               {...register("PhoneNumber")}
               value={watch("PhoneNumber")}
               style={{ width: "100%", paddingLeft: "12px" }}
-              className="bg-light-input-color outline-none border-none  py-[20px] sm:py-[24px] sm:px-[12px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
+              className="bg-light-input-color outline-none border-none sm:text-base text-sm  py-[20px] sm:py-[24px] sm:px-[12px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
               placeholder="Phone Number"
             />
           </div>
           {errors.PhoneNumber && (
-            <span className="text-red-500 text-sm">
+            <span className="text-red-500 text-xs sm:text-sm">
               {errors.PhoneNumber.message}
             </span>
           )}
         </div>
+
         <div>
           <Input
-            className="bg-light-input-color outline-none border-none  py-[20px] sm:py-[24px] sm:px-[12px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
+            className="bg-light-input-color outline-none border-none sm:text-base text-sm  py-[20px] sm:py-[24px] sm:px-[12px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
             type="email"
             {...register("Email")}
             placeholder="Email Address"
             value={watch("Email")}
           />
           {errors.Email && (
-            <span className="text-red-500 text-sm">{errors.Email.message}</span>
+            <span className="text-red-500 text-xs sm:text-sm">{errors.Email.message}</span>
           )}
         </div>
+
+        <div>
+          <div
+            style={{ width: "100%", position: "relative" }}
+            className="flex items-center gap-2"
+          >
+            <div className="left-[10px] flex items-center text-[13px] cursor-pointer">
+              {/* <p>+91</p>
+              <IoMdArrowDropdown className="text-[18px]" /> */}
+              <div className="w-max">
+                <Select
+                  required
+                  onValueChange={(e) => { setValue("CompanySize", e) }}
+
+                >
+                  <SelectTrigger className="w-max py-[20px] sm:p-[24px] bg-light-input-color">
+                    <SelectValue placeholder="Select Company Size" />
+                  </SelectTrigger>
+                  <SelectContent className="h-56">
+                    {[`It's only me (1)`, "2 - 10", "11 - 50", "51 - 100", "101 - 500", "501 - 1000"]?.map(
+                      (
+                        data: string,
+                        index
+                      ) => {
+                        return (
+                          <SelectItem
+                            key={data + index}
+                            value={data}
+                          >
+                            {`${data}`}
+                          </SelectItem>
+                        );
+                      }
+                    )}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+            <Input
+              type="text"
+              {...register("CompanyName")}
+              value={watch("CompanyName")}
+              style={{ width: "100%", paddingLeft: "12px" }}
+              className="bg-light-input-color outline-none border-none sm:text-base text-sm  py-[20px] sm:py-[24px] sm:px-[12px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
+              placeholder="Company Name"
+            />
+          </div>
+          {errors.CompanyName && (
+            <span className="text-red-500 text-xs sm:text-sm">
+              {errors.CompanyName.message}
+            </span>
+          )}
+        </div>
+
+        <div className="w-full">
+          <Select
+            required
+            onValueChange={(e) => setValue("JobRole", e)}
+          >
+            <SelectTrigger className="w-full py-[20px] sm:p-[24px] bg-light-input-color">
+              <SelectValue placeholder="Select Your Role" />
+            </SelectTrigger>
+            <SelectContent className="h-56">
+              {["SEO manager/ specialist", "Content specialist", "PPC specialist", "Social Media specialist", "Marketing Manager", "Business Owner", "Other"].map(
+                (
+                  data: string,
+                  index
+                ) => {
+                  return (
+                    <SelectItem
+                      key={data + index}
+                      value={data}
+                    >
+                      {`${data}`}
+                    </SelectItem>
+                  );
+                }
+              )}
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div className="w-full">
+          <Select
+            required
+            onValueChange={(e) => setValue("Country", e)}
+          >
+            <SelectTrigger className="w-full py-[20px] sm:p-[24px] bg-light-input-color">
+              <SelectValue placeholder="Select Country" />
+            </SelectTrigger>
+            <SelectContent className="h-56">
+              {CountryDialCodes.map(
+                (
+                  data: { name: string; dial_code: string; code: string },
+                  index
+                ) => {
+                  return (
+                    <SelectItem
+                      key={data?.name + index}
+                      value={data?.name}
+                    >
+                      {`${data?.name}`}
+                    </SelectItem>
+                  );
+                }
+              )}
+            </SelectContent>
+          </Select>
+        </div>
+
+
+        <div className="flex flex-col gap-3">
+          <p className="text-primary-color">What do you want to achieve with this call?</p>
+          <div className="w-full flex items-center gap-[6px]">
+            <Input
+              type="checkbox"
+              className="w-[19px] h-[19px]"
+              name="check"
+              id="check"
+              checked={watch("PurposeOfCall") == "Learn about features in other subscription plans"}
+              onChange={() => watch("PurposeOfCall") == 'Learn about features in other subscription plans' ? setValue("PurposeOfCall", "Get the most out of what I already use") : setValue("PurposeOfCall", "Learn about features in other subscription plans")}
+            />
+            <div className="flex gap-[4px] text-[14px] items-center capitalize">
+              <p>Learn about features in other subscription plans</p>
+            </div>
+          </div><div className="w-full flex items-center gap-[6px] capitalize">
+            <Input
+              type="checkbox"
+              className="w-[19px] h-[19px]"
+              name="check"
+              checked={watch("PurposeOfCall") == "Get the most out of what I already use"}
+              id="check"
+              onChange={() => watch("PurposeOfCall") == 'Get the most out of what I already use' ? setValue("PurposeOfCall", "Learn about features in other subscription plans") : setValue("PurposeOfCall", "Get the most out of what I already use")}
+            />
+            <div className="flex gap-[4px] text-[14px] items-center">
+              <p>Get the most out of what I already use</p>
+            </div>
+          </div>
+        </div>
+
         <div className="flex flex-col">
           <textarea
             {...register("Message")}
             value={watch("Message")}
             placeholder="Message"
             id="Message"
-            className="bg-light-input-color outline-none border-none px-4  py-[20px] sm:py-[24px] sm:px-[12px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
+            className="bg-light-input-color outline-none border-none sm:text-base text-sm px-4  py-[20px] sm:py-[24px] sm:px-[12px] resize-none [box-shadow:1px_1px_1px_0px_rgba(240,_235,_240,_1)]"
             rows={3}
           ></textarea>
           {errors.Message && (
-            <span className="text-red-500 text-sm">
+            <span className="text-red-500 text-xs sm:text-sm">
               {errors.Message.message}
             </span>
           )}
@@ -249,7 +398,7 @@ const ContactUsForm = () => {
         type="submit"
         className="w-full flex items-center justify-between cursor-pointer"
       >
-        <div className="bg-primary-color w-[80%] sm:w-[87%] p-[14px] text-[white] grid place-items-center font-semibold uppercase text-[13px]">
+        <div className="bg-primary-color w-[80%] sm:w-[87%] p-[13.7px] text-[white] grid place-items-center font-semibold uppercase text-[13px]">
           {!isPending ? (
             "SEND"
           ) : (

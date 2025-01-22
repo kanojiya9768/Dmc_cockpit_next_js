@@ -4,8 +4,14 @@ import React from "react";
 import { IoIosRocket } from "react-icons/io";
 import { motion } from "framer-motion";
 import { bottomVarient } from "@/lib/framer_variants";
+import { ModalStepStore } from "../../../../store/store";
+import { ModalStepStoreInterface } from "@/lib/typescript-types";
 
 export const BannerSection24_7 = () => {
+
+
+  const { setStep, setopenModal } = ModalStepStore() as ModalStepStoreInterface;
+
   return (
     <motion.div
       variants={bottomVarient}
@@ -33,7 +39,10 @@ export const BannerSection24_7 = () => {
           <p className="For_Which_user_text text-2xl sm:text-[28px] text-white">
             For Agencies
           </p>
-          <button className="flex items-center gap-[4px] w-max px-[20px] py-[4px] bg-transparent border-[1px] border-solid font-medium border-light-dark-grey-color text-[white] text-[13px] rounded-[99px] outline-[none]">
+          <button onClick={() => {
+            setStep('signup');
+            setopenModal(true);
+          }} className="flex items-center gap-[4px] w-max px-[20px] py-[4px] bg-transparent border-[1px] border-solid font-medium border-light-dark-grey-color text-[white] text-[13px] rounded-[99px] outline-[none]">
             <IoIosRocket className="text-green-color" /> Sign Up Now
           </button>
         </div>
